@@ -114,7 +114,7 @@ class App extends React.Component {
         <nav className="navbar navbar-expand-sm bg-light">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/shop">Products</Link>
+            <Link className="nav-link" to="/">Products</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/cart">Cart</Link>
@@ -124,7 +124,7 @@ class App extends React.Component {
           </li>
         </ul>
         </nav>
-          <Route path="/shop" exact render={(props)=>(<Products state={this.state} sum={this.sum} addCart={this.addCart} />)} />
+          <Route path="/" exact render={(props)=>(<Products state={this.state} sum={this.sum} addCart={this.addCart} />)} />
           <Route path="/cart" render={(props)=>(<Cart  state={this.state} sum={this.sum} minus={this.minus} plus={this.plus} delete={this.delete} />)} />
     </Router>
     )
